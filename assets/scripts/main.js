@@ -1,30 +1,19 @@
 
 
 
-const horns = [];
 const airhorn = new Audio("/assets/media/audio/air-horn.mp3");
-// airhorn.play();
-horns.push(airhorn);
-
-const carhorn = new Audio("/assets/media/audio/car-horn.mp3");
-horns.push(carhorn);   
-
+const carhorn = new Audio("/assets/media/audio/car-horn.mp3"); 
 const partyhorn = new Audio("/assets/media/audio/party-horn.mp3");
-horns.push(partyhorn);   
 
-let currHorn = horns[0];
 
 function changeVol(vol) {
-  for (let horn of horns){
-    horn.volume = vol;
-  }
+  airhorn.volume = vol;
+  carhorn.volume = vol;
+  partyhorn.volume = vol;
 }
 
 // change volume from text input field
-let volnum = document.getElementByID("volume-number")
-volnum.addEventListener("change", voltext);
-
-function voltext() {
+document.getElementByID("volume-number").addEventListener("change", function () {
   document.getElementById("volume-slider").value = this.value;
   changeVol(this.value);
   
@@ -34,7 +23,7 @@ function voltext() {
   else {
     document.getElementById("honk-btn").disabled = false;
   }
-}
+});
 
 // change volume from slider
 document.getElementByID("volume-slider").addEventListener("change", function () {
@@ -49,31 +38,22 @@ document.getElementByID("volume-slider").addEventListener("change", function () 
   }
 });
 
-// change in air horn button
-document.getElementByID("radio-air-horn").addEventListener("change", function () {
+
+
+// hitting "honk" button
+document.getElementById("honk-btn").addEventListener("click", function (event) {
+  event.preventDefault();
+
+  // see which one to play
   if (document.getElementById("radio-air-horn").checked) {
-    currHorn = horns[0];
+    airhorn.play();
   }
-});
-
-// change in car horn button
-document.getElementByID("radio-car-horn").addEventListener("change", function () {
-  if (document.getElementById("radio-car-horn").checked) {
-    currHorn = horns[1];
+  else if (document.getElementById("radio-car-horn").checked) {
+    carhorn.play();
   }
-});
-
-// change in car horn button
-document.getElementByID("radio-party-horn").addEventListener("change", function () {
-  if (document.getElementById("radio-party-horn").checked) {
-    currHorn = horns[2];
+  else {
+    partyhorn.play();
   }
-});
-
-
-
-document.getElementById("honk-btn").addEventListener("click", function () {
-  currHorn.play();
 });
   
 
