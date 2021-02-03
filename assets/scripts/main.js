@@ -7,13 +7,14 @@ const partyhorn = new Audio("/assets/media/audio/party-horn.mp3");
 
 
 function changeVol(vol) {
-  airhorn.volume = vol;
-  carhorn.volume = vol;
-  partyhorn.volume = vol;
+  vlme = vol * 0.01;
+  airhorn.volume = vlme;
+  carhorn.volume = vlme;
+  partyhorn.volume = vlme;
 }
 
 // change volume from text input field
-document.getElementByID("volume-number").addEventListener("input", function () {
+document.getElementById("volume-number").addEventListener("input", function () {
   document.getElementById("volume-slider").value = this.value;
   changeVol(this.value);
   
@@ -26,7 +27,7 @@ document.getElementByID("volume-number").addEventListener("input", function () {
 });
 
 // change volume from slider
-document.getElementByID("volume-slider").addEventListener("input", function () {
+document.getElementById("volume-slider").addEventListener("input", function () {
   document.getElementById("volume-number").value = this.value;
   changeVol(this.value);
   
