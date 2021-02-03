@@ -1,4 +1,4 @@
-//document.onload = function ...
+window.onload = function () {
 
 
 const horns = [];
@@ -75,4 +75,4 @@ document.getElementById("honk-btn").addEventListener("click", function () {
   
 
 
-
+}
