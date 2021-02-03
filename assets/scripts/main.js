@@ -1,9 +1,9 @@
 
 
 
-const airhorn = new Audio("/assets/media/audio/air-horn.mp3");
-const carhorn = new Audio("/assets/media/audio/car-horn.mp3"); 
-const partyhorn = new Audio("/assets/media/audio/party-horn.mp3");
+const airhorn = new Audio("https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/air-horn.mp3");
+const carhorn = new Audio("https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/car-horn.mp3"); 
+const partyhorn = new Audio("https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/party-horn.mp3");
 
 
 function changeVol(vol) {
