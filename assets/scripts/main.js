@@ -2,14 +2,14 @@
 
 
 const horns = [];
-const airhorn = new Audio(https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/air-horn.mp3);
+const airhorn = new Audio("https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/air-horn.mp3");
 // airhorn.play();
 horns.push(airhorn);
 
-const carhorn = new Audio(https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/car-horn.mp3);
+const carhorn = new Audio("https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/car-horn.mp3");
 horns.push(carhorn);   
 
-const carhorn = new Audio(https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/party-horn.mp3);
+const carhorn = new Audio("https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/audio/party-horn.mp3");
 horns.push(partyhorn);   
 
 let currHorn = horns[0];
