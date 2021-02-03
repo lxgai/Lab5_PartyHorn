@@ -13,7 +13,7 @@ function changeVol(vol) {
 }
 
 // change volume from text input field
-document.getElementByID("volume-number").addEventListener("change", function () {
+document.getElementByID("volume-number").addEventListener("input", function () {
   document.getElementById("volume-slider").value = this.value;
   changeVol(this.value);
   
@@ -26,7 +26,7 @@ document.getElementByID("volume-number").addEventListener("change", function () 
 });
 
 // change volume from slider
-document.getElementByID("volume-slider").addEventListener("change", function () {
+document.getElementByID("volume-slider").addEventListener("input", function () {
   document.getElementById("volume-number").value = this.value;
   changeVol(this.value);
   
