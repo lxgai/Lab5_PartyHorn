@@ -21,7 +21,7 @@ function changeVol(vol) {
 }
 
 // change volume from text input field
-document.getElementByID("volume-number").addEventListener("change", function (n) {
+document.getElementByID("volume-number").addEventListener("change", function () {
   document.getElementById("volume-slider").value = this.value;
   changeVol(this.value);
   
@@ -34,7 +34,7 @@ document.getElementByID("volume-number").addEventListener("change", function (n)
 });
 
 // change volume from slider
-document.getElementByID("volume-slider").addEventListener("change", function (s) {
+document.getElementByID("volume-slider").addEventListener("change", function () {
   document.getElementById("volume-number").value = this.value;
   changeVol(this.value);
   
@@ -47,21 +47,21 @@ document.getElementByID("volume-slider").addEventListener("change", function (s)
 });
 
 // change in air horn button
-document.getElementByID("radio-air-horn").addEventListener("change", function (a) {
+document.getElementByID("radio-air-horn").addEventListener("change", function () {
   if (document.getElementById("radio-air-horn").checked) {
     currHorn = horns[0];
   }
 });
 
 // change in car horn button
-document.getElementByID("radio-car-horn").addEventListener("change", function (c) {
+document.getElementByID("radio-car-horn").addEventListener("change", function () {
   if (document.getElementById("radio-car-horn").checked) {
     currHorn = horns[1];
   }
 });
 
 // change in car horn button
-document.getElementByID("radio-party-horn").addEventListener("change", function (p) {
+document.getElementByID("radio-party-horn").addEventListener("change", function () {
   if (document.getElementById("radio-party-horn").checked) {
     currHorn = horns[2];
   }
@@ -69,7 +69,7 @@ document.getElementByID("radio-party-horn").addEventListener("change", function 
 
 
 
-document.getElementById("honk-btn").addEventListener("click", function (h) {
+document.getElementById("honk-btn").addEventListener("click", function () {
   currHorn.play();
 });
   
