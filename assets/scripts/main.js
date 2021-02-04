@@ -20,10 +20,21 @@ document.getElementById("volume-number").addEventListener("input", function () {
   
   if (this.value == 0) {
     document.getElementById("honk-btn").disabled = true; 
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-0.svg";
   }
-  else {
+  else if ( (this.value >= 1) && (this.value <= 33) ) {
     document.getElementById("honk-btn").disabled = false;
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-1.svg";
   }
+  else if ( (this.value >= 34) && (this.value <= 66) ) {
+    document.getElementById("honk-btn").disabled = false;
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-2.svg";
+  }
+  else if ( (this.value >= 67) && (this.value <= 100) ) {
+    document.getElementById("honk-btn").disabled = false;
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-3.svg";
+  }
+  
 });
 
 // change volume from slider
@@ -33,10 +44,41 @@ document.getElementById("volume-slider").addEventListener("input", function () {
   
   if (this.value == 0) {
     document.getElementById("honk-btn").disabled = true; 
+    document.getElementById("volume-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-0.svg";
   }
-  else {
+  else if ( (this.value >= 1) && (this.value <= 33) ) {
     document.getElementById("honk-btn").disabled = false;
+    document.getElementById("volume-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-1.svg";
   }
+  else if ( (this.value >= 34) && (this.value <= 66) ) {
+    document.getElementById("honk-btn").disabled = false;
+    document.getElementById("volume-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-2.svg";
+  }
+  else if ( (this.value >= 67) && (this.value <= 100) ) {
+    document.getElementById("honk-btn").disabled = false;
+    document.getElementById("volume-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/icons/volume-level-3.svg";
+  }
+});
+
+// change image
+document.getElementById("radio-air-horn").addEventListener("input", function() {
+  if (document.getElementById("radio-air-horn").checked) {
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/images/air-horn.svg";
+  }
+
+});
+document.getElementById("radio-car-horn").addEventListener("input", function() {
+  if (document.getElementById("radio-car-horn").checked) {
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/images/car.svg";
+  }
+
+});
+
+document.getElementById("radio-party-horn").addEventListener("input", function() {
+  if (document.getElementById("radio-party-horn").checked) {
+    document.getElementById("sound-image").src = "https://raw.githubusercontent.com/lxgai/Lab5_PartyHorn/master/assets/media/images/party-horn.svg";
+  }
+
 });
 
 
